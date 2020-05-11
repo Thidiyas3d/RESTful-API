@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="index.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<div class="top">
+  <h2>A  <span> Restful API</span> for rapid prototyping</h2>
+</div>
+<hr>
+<div class="middle">
+  <div class="test">
+    <h4 style="color:green; font-size:30px;">Get started</h4>
+    <p><i class="fa fa-fire" style="font-size:40px;color:#f58e17;"></i> Fire up your browser dev console and paste the code below:</p>
+    <p class="sample-code">
+        <code>fetch('https://myfakeurl.heroku/posts')<br>
+        .then(response =>{<br>return response.json()});<br>
+        .then(data => console.log(data));
+        </code>
+    </p>
+    <p class="response">Even better <button onclick="apiRequest()">Click here</button> I assure, you won't break the internet.</p>
+  </div>
+  <div>
+      <p id="results"></p>
+      <p id="para1"></p>
+  </div>
+  <div class="endpoints">
+    <h3 style="color:green;font-size:30px;">Resources</h3>
+    <p>Following are the API endpoints.</p>
+    <ul>
+      <li>/posts - returns 20 posts objects</li>
+      
+      <li>/users - returns 10 users objects</li>
+      
+      <li>/quotes - returns 5 quotes objects</li>
+    </ul>
+  </div>
+  <div class="routes">
+    <h2 style="color:green;font-size:30px;">Routes</h2>
+    <p>Following HTTP methods are supported.</p>
+    <ul>
+      <li>GET - /users</li>
+      <li>POST - /users</li>
+      <li>GET - /quotes</li>
+      <li>POST - /quotes</li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="bottom">
+{  Made with Love}<br><i class="fa fa-heart" style="font-size:20px;color:red"></i> 
+</div>
+
+
+<script>
+  function apiRequest(){
+    /*
+    fetch('')
+    .then(response =>{
+      return response.json();
+    })
+    .then(data=>{
+      let d = data;
+    })
+    .catch(err=>{
+      return err;
+    });
+    */
+
+let d={"a":"aaa","b":"bbb"};
+var para = document.getElementById("results");
+para.style.display="block";
+para.innerHTML="<code>"+d+"<code>";
+var para1 = document.getElementById("para1");
+para1.style.color="#f58e17";
+para1.innerHTML="You knocked it off!!!";
+
+
+  }
+
+
+</script>
