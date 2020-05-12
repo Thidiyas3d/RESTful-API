@@ -22,11 +22,11 @@ app.get('/',(req,res)=>{
 
 //database connection
 //NOTE: add ur mongodb database username : password below
-mongoose.connect('mongodb+srv://thidiyas:<ur password>@alexander-irqlu.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://thidiyas:thidiyasl@alexander-irqlu.mongodb.net/test?retryWrites=true&w=majority',
 { useNewUrlParser: true,useUnifiedTopology: true}, ()=>console.log("connected to database"));
 
 
 
-app.listen(8080,()=>{
+app.listen(process.env.PORT,()=>{
         console.log("server is listening on port 8080...");
 });

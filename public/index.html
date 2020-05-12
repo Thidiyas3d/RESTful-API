@@ -1,6 +1,12 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="index.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restful API</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
 <div class="top">
   <h2>A  <span> Restful API</span> for rapid prototyping</h2>
 </div>
@@ -11,14 +17,17 @@
     <p><i class="fa fa-fire" style="font-size:40px;color:#f58e17;"></i> Fire up your browser dev console and paste the code below:</p>
     <p class="sample-code">
         <code>fetch('https://myfakeurl.heroku/posts')<br>
-        .then(response =>{<br>return response.json()});<br>
-        .then(data => console.log(data));
+          &emsp;&emsp;.then(response =>{<br>&emsp;&emsp;&emsp;&emsp;return response.json()});<br>
+          &emsp;&emsp;.then(data => console.log(data));
         </code>
     </p>
-    <p class="response">Even better <button onclick="apiRequest()">Click here</button> I assure, you won't break the internet.</p>
+    <p class="response">Even better
+      <a href="https://jsonplaceholder.typicode.com/posts/2" target="my_iframe"><button onclick="display()">Click here</button></a>
+      I assure, you won't break the internet.
+    </p>
   </div>
   <div>
-      <p id="results"></p>
+      <iframe  name="my_iframe" id="results"></iframe>
       <p id="para1"></p>
   </div>
   <div class="endpoints">
@@ -49,32 +58,14 @@
 {  Made with Love}<br><i class="fa fa-heart" style="font-size:20px;color:red"></i> 
 </div>
 
-
 <script>
-  function apiRequest(){
-    /*
-    fetch('')
-    .then(response =>{
-      return response.json();
-    })
-    .then(data=>{
-      let d = data;
-    })
-    .catch(err=>{
-      return err;
-    });
-    */
+  function display(){   
+      var para = document.getElementById("results");
+      para.style.display="block";
 
-let d={"a":"aaa","b":"bbb"};
-var para = document.getElementById("results");
-para.style.display="block";
-para.innerHTML="<code>"+d+"<code>";
-var para1 = document.getElementById("para1");
-para1.style.color="#f58e17";
-para1.innerHTML="You knocked it off!!!";
+      var para1 = document.getElementById("para1");
+      para1.style.color="#f58e17";
 
-
-  }
-
-
+      para1.innerHTML="You knocked it off!!!";
+    }
 </script>
