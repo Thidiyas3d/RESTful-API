@@ -23,8 +23,8 @@ app.get('/',(req,res)=>{
 
 
 //database connection
-//NOTE: add ur mongodb database username:password below
-mongoose.connect('mongodb+srv://thidiyas:thidiyasl@alexander-irqlu.mongodb.net/test?retryWrites=true&w=majority',
+//signup with MongoDB Atlas and use ur credentials: username and password.
+mongoose.connect('mongodb+srv://thidiyas:<ur password>@alexander-irqlu.mongodb.net/test?retryWrites=true&w=majority',
 { useNewUrlParser: true,useUnifiedTopology: true}, ()=>console.log("connected to database"));
 
 let PORT = process.env.PORT || 8080;

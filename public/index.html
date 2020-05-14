@@ -1,3 +1,5 @@
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,66 +8,67 @@
   <link rel="stylesheet" href="index.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-
 <div class="top">
   <h2>A  <span> Restful API</span> for rapid prototyping</h2>
 </div>
 <hr>
 <div class="middle">
   <div class="test">
-    <h4 style="color:green; font-size:30px;">Get started</h4>
-    <p><i class="fa fa-fire" style="font-size:40px;color:#f58e17;"></i> Fire up your browser dev console and paste the code below:</p>
-    <p class="sample-code">
-        <code>fetch('https://myfakeurl.heroku/posts')<br>
-          &emsp;&emsp;.then(response =>{<br>&emsp;&emsp;&emsp;&emsp;return response.json()});<br>
-          &emsp;&emsp;.then(data => console.log(data));
+     <h4 style="color:green; font-size:30px;">Get started</h4>
+     <p><i class="fa fa-fire" style="font-size:40px;color:#f58e17;"></i> Fire up your browser dev console and paste the code below:</p>
+     <p class="sample-code">
+        <code>fetch('https://stark-plains-84731.herokuapp.com/users')<br>
+        &emsp;&emsp;.then(response =>{<br>&emsp;&emsp;&emsp;&emsp;return response.json();
+        <br>&emsp;&emsp;&emsp;&emsp;})<br>
+        &emsp;&emsp;.then(data => console.log(data));
         </code>
-    </p>
-    <p class="response">Even better
-      <a href="https://jsonplaceholder.typicode.com/posts/2" target="my_iframe"><button onclick="display()">Click here</button></a>
-      I assure, you won't break the internet.
-    </p>
+     </p>
+     <p class="response">Even better
+        <a href="https://stark-plains-84731.herokuapp.com/posts" target="my_iframe"><button onclick="display()">Click here</button></a>
+        I assure, you won't break the internet.
+     </p>
   </div>
   <div>
-      <iframe  name="my_iframe" id="results"></iframe>
-      <p id="para1"></p>
+     <iframe  name="my_iframe" id="results"></iframe>
+     <a id="alternate-results" href="https://stark-plains-84731.herokuapp.com/posts" target="_blank"
+        style="color:silver;display: none; font-size: 14px;text-decoration: none;padding-top: 10px;">
+     Click here if you were unable to see results.</a>
+     <p id="para1"></p>
   </div>
   <div class="endpoints">
-    <h3 style="color:green;font-size:30px;">Resources</h3>
-    <p>Following are the API endpoints.</p>
-    <ul>
-      <li>/posts - returns 20 posts objects</li>
-      
-      <li>/users - returns 10 users objects</li>
-      
-      <li>/quotes - returns 5 quotes objects</li>
-    </ul>
+     <h3 style="color:green;font-size:30px;">Resources</h3>
+     <p>Following are the API endpoints.</p>
+     <ul>
+        <li>/posts - returns 10 posts objects</li>
+        <li>/users - returns 10 users objects</li>
+        <li>/quotes - returns 10 quotes objects</li>
+     </ul>
   </div>
   <div class="routes">
-    <h2 style="color:green;font-size:30px;">Routes</h2>
-    <p>Following HTTP methods are supported.</p>
-    <ul>
-      <li>GET - /users</li>
-      <li>POST - /users</li>
-      <li>GET - /quotes</li>
-      <li>POST - /quotes</li>
-    </ul>
-
+     <h2 style="color:green;font-size:30px;">Routes</h2>
+     <p>Following HTTP methods are supported.</p>
+     <ul>
+        <li>GET - /users</li>
+        <li>POST - /users</li>
+        <li>GET - /quotes</li>
+        <li>POST - /quotes</li>
+     </ul>
   </div>
 </div>
-
 <div class="bottom">
-{  Made with Love}<br><i class="fa fa-heart" style="font-size:20px;color:red"></i> 
+  {  Made with Love}<br><i class="fa fa-heart" style="font-size:20px;color:red"></i> 
 </div>
-
 <script>
   function display(){   
       var para = document.getElementById("results");
       para.style.display="block";
-
+  
       var para1 = document.getElementById("para1");
       para1.style.color="#f58e17";
-
+      var res = document.getElementById("alternate-results");
+      res.style.display="block";
+  
       para1.innerHTML="You knocked it off!!!";
     }
 </script>
+

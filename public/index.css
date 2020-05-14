@@ -39,10 +39,24 @@ body{
     letter-spacing:1px;
     border-radius:4px;
     border-left:10px solid green;
+    overflow: auto;
   }
+  
   .sample-code:hover{
     border-right:10px solid green;
     box-shadow:1px 0px 10px 1px silver;
+  }
+  @media only screen and (max-width:600px){
+    .sample-code{
+      width:90%;
+      padding: 8px;
+      border-left: 2px solid green;
+      
+    }
+    .sample-code:hover{
+      border-right:2px solid green;
+      box-shadow:1px 0px 10px 1px silver;
+    }
   }
   button{
     padding:10px;
@@ -69,6 +83,17 @@ body{
   #results:hover{
     border-right:10px solid green;
     box-shadow:1px 0px 10px 1px silver;
+  }
+
+  @media only screen and (max-width:600px){
+    #results{
+      width: 80%;
+      border-left:2px solid green;
+    }
+    #results:hover{
+      border-right:2px solid green;
+      box-shadow:1px 0px 10px 1px silver;
+    }
   }
 
   ul>li{

@@ -10,7 +10,7 @@ router.get('/', async(req,res) => {
 
      try {
         //query database for posts
-         const user = await users.find().limit(20);
+         const user = await users.find().limit(10);
          //send results to client
          res.json(user);
      } catch (error) {
