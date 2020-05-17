@@ -6,7 +6,7 @@ const postSchema = mongoose.Schema({
     body: {type:String, required:true},
     likes:Number,
     share:Number,
-    author:String
+    username:String
 });
 
 module.exports = mongoose.model("postSchema", postSchema);

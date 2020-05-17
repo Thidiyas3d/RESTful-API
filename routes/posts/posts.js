@@ -21,7 +21,7 @@ router.post('/', async(req, res)=>{
             body:req.body.body,
             likes:req.body.likes,
             share:req.body.share,
-            author:req.body.author
+            username:req.body.username
     });
   
     try{
